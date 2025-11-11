@@ -5,6 +5,11 @@ import { useNavigate } from "react-router-dom";
 // FORM COMPONENT (put this above or in a separate file)
 function GymRegistrationForm() {
  const navigate = useNavigate();
+ const handleSubmit = (e) => {
+    e.preventDefault(); 
+    navigate("/lead-management")
+
+  };
   return (
     <div className="max-w-md w-full mx-auto">
       <h2 className="text-2xl font-bold text-center mb-5">Details</h2>
@@ -48,7 +53,7 @@ function GymRegistrationForm() {
             I agree to the <a href="/privacy-policy" className="text-green-600 underline">Privacy Policy</a>.
           </label>
         </div>
-        <button type="submit" className="w-full bg-green-600 text-white font-bold py-3 rounded-lg" onClick={navigate("/lead-management")}>
+        <button type="submit" className="w-full bg-green-600 text-white font-bold py-3 rounded-lg" onClick={handleSubmit}>
           Next
         </button>
       </form>
