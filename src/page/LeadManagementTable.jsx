@@ -15,7 +15,7 @@ import Arrow from "../assets/Arrow right-circle.png";
 import whatsapp from "../assets/logos_whatsapp-icon.png";
 import box from "../assets/Box (1).png";
 import add from "../assets/gridicons_add.png";
-
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 
@@ -46,16 +46,19 @@ const interestStyles = {
 };
 
 export const Sidebar = () => {
-  const { user, loading } = useAuth();
+  const { user } = useAuth();
 
   return (
     <aside className="bg-gray-200 min-h-screen w-64 flex flex-col p-4">
       <div className="flex items-center mb-10">
-        <img
+        
+<img
           src={logo}
           alt="WellVantage Logo"
           className="w-20 h-20 md:w-32 md:h-32 mb-4 mx-auto object-contain"
         />
+         
+        
       </div>
       <nav className="space-y-1 pb-15">
         {sidebarLinks.map((link, idx) => (
@@ -259,14 +262,18 @@ const LeadListPage = () => {
     }
     return pages;
   };
-
+      const navigate = useNavigate();
+  
+const handleAdd = () => {
+  navigate("/lead-management-form");
+}
   return (
     <div className="flex bg-white-50 min-h-screen">
       <Sidebar />
       <main className="flex-1 ">
         <div className="flex items-center justify-between mb-3 bg-gray-50 p-8">
           <h1 className="text-2xl font-bold" >Lead Management</h1>
-          <button className=" r">
+          <button onClick={handleAdd}> 
             <img src={add} alt="Add" className="w-10 h-10"/> 
           </button>
         </div>
