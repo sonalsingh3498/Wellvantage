@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo2.png";
 import { FaWhatsapp, FaPhoneAlt, FaCube } from "react-icons/fa";
-import dashboard from "../assets/Dashboard.png";
+import dashboard from "../assets/dashboard.png";
 import employeemanagement from "../assets/employee-management.png";
 import leadmanagement from "../assets/lead-management.png";
 import membermanagement from "../assets/membermanagement.png";
