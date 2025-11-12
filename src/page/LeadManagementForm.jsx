@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef  } from "react";
 // Update these import paths and asset files as needed:
-import dashboard from "../assets/Dashboard.png";
+import dashboard from "../assets/dashboard.png";
 import employeemanagement from "../assets/employee-management.png";
 import leadmanagement from "../assets/lead-management.png";
 import membermanagement from "../assets/membermanagement.png";
